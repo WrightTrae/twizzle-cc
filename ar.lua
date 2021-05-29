@@ -1,3 +1,8 @@
+controller = peripheral.find("arController")
+if controller == nil then
+    error("Can't find AR Controller")
+end
+
 controller = peripheral.wrap("left") -- Defines the controller to the left of the computer
 controller.setRelativeMode(true, 1600, 900) -- Convenient Aspect ratio for most screens
 while true do
